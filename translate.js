@@ -1,9 +1,12 @@
 #! /usr/bin/env node
 
-const translate = require('google-translate-api');
+received = process.argv[2];
 
-translate(process.argv[2], {from: 'ja', to: 'en'}).then(res => {
+const translate = require('@imlinhanchao/google-translate-api');
+
+translate(received, {to: 'en'}).then(res => {
     console.log(res.text);
+    console.log(res.from.language.iso);
 }).catch(err => {
     console.error(err);
 });
