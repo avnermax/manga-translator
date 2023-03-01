@@ -38,6 +38,7 @@ class TranslatedBlurb(Blurb):
 
 def translate_text(text):
     bs = subprocess.check_output(["node", "translate.js", text])
+    print(bs)
     return bs
 
 

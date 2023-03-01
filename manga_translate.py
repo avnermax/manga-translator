@@ -12,7 +12,7 @@ from PIL import Image
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("img")
-#    parser.add_argument("out")
+    parser.add_argument("out")
     args = parser.parse_args()
 
     img = cv2.imread(args.img)
@@ -22,9 +22,9 @@ def main():
     for blurb in blurbs:
         translated = translate.translate_blurb(blurb)
 #        translated = blurb
-        typeset.typeset_blurb(to_typeset, translated)
+#        typeset.typeset_blurb(to_typeset, translated)
 
-    to_typeset.save('out/saida')
+#    to_typeset.save(args.out)
 
 if __name__ == "__main__":
     main()

@@ -1,1 +1,5 @@
-{}
+{
+  "dependencies": {
+    "@saipulanuar/google-translate-api": "^8.0.0"
+  }
+}

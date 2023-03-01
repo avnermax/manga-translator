@@ -2,7 +2,7 @@
 
 received = process.argv[2];
 
-const translate = require('@imlinhanchao/google-translate-api');
+const translate = require('@saipulanuar/google-translate-api');
 
 translate(received, {to: 'en'}).then(res => {
     console.log(res.text);
